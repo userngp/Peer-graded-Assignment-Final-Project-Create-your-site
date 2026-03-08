@@ -1,0 +1,102 @@
+/* 1. Skip to Content (Chỉ hiện khi focus) */
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    background: #ffff00;
+    color: #000000;
+    padding: 15px;
+    border: 3px solid #000;
+    text-decoration: none;
+}
+
+/* 2. Navigation với ít nhất 3 thuộc tính & Flexbox */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2c3e50; /* Độ tương phản cao */
+    padding: 20px;
+    border-bottom: 5px solid #18bc9c;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* 3. Hover Pseudo-class */
+nav a:hover {
+    background-color: #18bc9c;
+    color: #000000;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+/* 4. Box Model cho tất cả hình ảnh */
+img {
+    border: 8px solid #34495e;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 90%;
+    height: auto;
+    margin: 10px;
+}
+
+/* 5. Grid Property (Tối thiểu 2 cột) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+/* 6. Flex Property */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+/* 7. nth-child Selector (Bo góc ảnh chẵn/lẻ khác nhau) */
+img:nth-child(even) {
+    border-radius: 50px;
+    border-color: #18bc9c;
+}
+
+img:nth-child(odd) {
+    border-radius: 0px;
+    border-color: #e74c3c;
+}
+
+/* Layout cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    min-height: 60vh;
+}
